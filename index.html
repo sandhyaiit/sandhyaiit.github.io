@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>S Sandhya Rani</title>
+  <meta name="description" content="Machine learning engineer at Qualcomm R&D. M.Tech, IIT Hyderabad. Work on model deployment, retrieval, and deep learning.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,620&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="wrap hero">
+    <p class="kicker">Hyderabad</p>
+    <h1>S Sandhya Rani</h1>
+    <p class="role">Machine learning engineer at Qualcomm R&amp;D. M.Tech, Indian Institute of Technology Hyderabad.</p>
+    <p class="links">
+      <a href="mailto:sranisandhya@gmail.com">sranisandhya@gmail.com</a>
+      <a href="https://github.com/sandhyaiit">GitHub</a>
+      <a href="https://www.linkedin.com/in/sandhya-rani-191100207">LinkedIn</a>
+    </p>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <h2>Work</h2>
+      <article>
+        <p class="when">Sept 2024 – present</p>
+        <h3>Machine Learning Engineer, Qualcomm R&amp;D, India</h3>
+        <ul>
+          <li>Upstreamed Mistral support in Microsoft Olive-Recipes and ran sensitivity analysis for QAIRT, so models deploy and run on Snapdragon NPUs.</li>
+          <li>Loaded weights only when a layer needed them, and converted tensors on demand. With compression, peak RAM fell by 90% and inference throughput went up.</li>
+          <li>Wrote custom DirectML operators for ML inference on ARM Windows on Snapdragon.</li>
+        </ul>
+      </article>
+      <article>
+        <p class="when">May 2024 – July 2024</p>
+        <h3>Generative AI Intern, Primera Medical Technologies</h3>
+        <ul>
+          <li>Built a retrieval system that drafts insurance claim approvals and denials with Azure OpenAI and sentence transformers.</li>
+          <li>Raised accuracy with a sliding window in LlamaIndex, stored data in Azure AI, and served it through FastAPI and Streamlit.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <article>
+        <p class="when">August 2025</p>
+        <h3><a href="https://github.com/sandhyaiit/gemma-lora">Gemma with LoRA</a></h3>
+        <p>Fine-tuned Gemma on the No Robots dataset with parameter-efficient LoRA, then served the adapter in a Streamlit chat.</p>
+      </article>
+      <article>
+        <p class="when">June 2024</p>
+        <h3><a href="https://github.com/sandhyaiit/lstm-gan-soh">Quantized LSTM-GAN for battery state of health</a></h3>
+        <p>Estimated lithium-ion state of health on the Oxford battery cells. An LSTM-GAN and a Bi-LSTM-WGAN add training sequences, then the estimators are packed from float32 to int8 with post-training quantization and quantization-aware training.</p>
+      </article>
+      <article>
+        <p class="when">November 2023</p>
+        <h3><a href="https://github.com/sandhyaiit/Knowledge-Distillation">Task-specific BERT distillation</a></h3>
+        <p>Distilled BERT-base into BERT-tiny in one step. The student reached 83.4% accuracy with 96% fewer parameters.</p>
+      </article>
+      <article>
+        <p class="when">July 2023</p>
+        <h3>Road damage across countries</h3>
+        <p>Detected road damage with transfer learning on 26,620 images from different countries. Compared SSD MobileNet, YOLO, and Faster R-CNN. SSD MobileNet was the stronger detector.</p>
+      </article>
+      <article>
+        <p class="when">March 2023</p>
+        <h3><a href="https://github.com/sandhyaiit/Cross-Domain-NER">Cross-domain named entity recognition</a></h3>
+        <p>BiLSTM-CRF for a low-resource target domain, with multi-task learning and a mixture of entity experts.</p>
+      </article>
+      <article>
+        <p class="when">November 2022</p>
+        <h3><a href="https://github.com/sandhyaiit/Low_light_enhancement">Low-light image enhancement</a></h3>
+        <p>MBLLEN pulls features at several depths, enhances each branch, and merges them into the output image.</p>
+      </article>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <ul class="plain">
+        <li><strong>M.Tech</strong>, Indian Institute of Technology Hyderabad. CPI 8.75/10. 2024.</li>
+        <li><strong>B.Tech</strong>, Rungta College of Engineering and Technology, Bhilai. CPI 8.51/10. 2019.</li>
+        <li>Senior secondary, Saraswati Vihar English Medium School, Bhilai. 82.40%. 2015.</li>
+        <li>Higher secondary, Saraswati Vihar English Medium School, Bhilai. 83.67%. 2013.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <p>Python, C, C++, SQL, MATLAB. NumPy, Pandas, Keras, Flask, Hugging Face Transformers, LangChain, LlamaIndex, CrewAI, Semantic Kernel, ChromaDB, Weaviate, FAISS, OpenAI API, Azure OpenAI, Ollama.</p>
+      <p>Coursework includes machine learning, deep learning, natural language processing, large language models, retrieval-augmented generation, and agentic systems, plus linear algebra, probability, and data structures.</p>
+    </section>
+
+    <section>
+      <h2>Also</h2>
+      <ul class="plain">
+        <li>Speaker, faculty development program on retrieval-augmented generation, PVPSIT, June 2025.</li>
+        <li>Placement coordinator, Office of Career Services, IIT Hyderabad, 2024.</li>
+        <li>GenAI lead, Google Developer Student Club, IIT Hyderabad, 2024.</li>
+        <li>GATE, 96.26 percentile, 2022. HackerRank 5 star in Python and 4 star in SQL.</li>
+        <li>LLM training, Google Cloud. NLP in TensorFlow. Machine learning and deep learning, IIT Madras. AI training, IIT Bhubaneswar, including a Flask movie recommender.</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
