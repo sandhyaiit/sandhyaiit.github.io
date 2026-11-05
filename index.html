@@ -4,106 +4,223 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>S Sandhya Rani</title>
-  <meta name="description" content="Machine learning engineer at Qualcomm R&D. M.Tech, IIT Hyderabad. Work on model deployment, retrieval, and deep learning.">
+  <meta name="description" content="Sandhya Rani, machine learning engineer at Qualcomm R&D. Models that have to fit the device, plus the projects behind that work.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,620&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,640&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="wrap hero">
-    <p class="kicker">Hyderabad</p>
-    <h1>S Sandhya Rani</h1>
-    <p class="role">Machine learning engineer at Qualcomm R&amp;D. M.Tech, Indian Institute of Technology Hyderabad.</p>
-    <p class="links">
-      <a href="mailto:sranisandhya@gmail.com">sranisandhya@gmail.com</a>
-      <a href="https://github.com/sandhyaiit">GitHub</a>
-      <a href="https://www.linkedin.com/in/sandhya-rani-191100207">LinkedIn</a>
-    </p>
+  <header class="top">
+    <a class="brand" href="#home">Sandhya Rani</a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#work">Work</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+    </nav>
   </header>
 
-  <main class="wrap">
-    <section>
+  <main id="home">
+    <section class="hero wrap">
+      <img class="portrait" src="images/photo.jpg" width="280" height="280" alt="Sandhya Rani">
+      <div>
+        <p class="kicker">Hyderabad</p>
+        <h1>S Sandhya Rani</h1>
+        <p class="role">Machine learning engineer at Qualcomm R&amp;D. I spend most of my time getting a model onto the chip that has to run it.</p>
+        <ul class="contact">
+          <li><span>Email</span><a href="mailto:sranisandhya@gmail.com">sranisandhya@gmail.com</a></li>
+          <li><span>GitHub</span><a href="https://github.com/sandhyaiit">sandhyaiit</a></li>
+          <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/sandhya-rani-191100207">sandhya-rani</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="wrap prose" aria-labelledby="bio-title">
+      <h2 id="bio-title">A short note</h2>
+      <p>I like the part of machine learning that shows up after the notebook looks finished. A weight file that is too big for the device, a retrieval stack that quotes the wrong clause, a score that only holds on the training split. At Qualcomm that shows up as compilers, memory, and operators. Before that, at Primera, it was an insurance claim that had to be drafted from the policy rather than from a blank prompt.</p>
+      <p>The projects below are the same habit on my own time. Tune a small model, measure it on a split I did not train on, and keep the number even when the fancy version loses.</p>
+    </section>
+
+    <section class="wrap" id="work">
       <h2>Work</h2>
-      <article>
-        <p class="when">Sept 2024 – present</p>
-        <h3>Machine Learning Engineer, Qualcomm R&amp;D, India</h3>
-        <ul>
-          <li>Upstreamed Mistral support in Microsoft Olive-Recipes and ran sensitivity analysis for QAIRT, so models deploy and run on Snapdragon NPUs.</li>
-          <li>Loaded weights only when a layer needed them, and converted tensors on demand. With compression, peak RAM fell by 90% and inference throughput went up.</li>
-          <li>Wrote custom DirectML operators for ML inference on ARM Windows on Snapdragon.</li>
-        </ul>
-      </article>
-      <article>
-        <p class="when">May 2024 – July 2024</p>
-        <h3>Generative AI Intern, Primera Medical Technologies</h3>
-        <ul>
-          <li>Built a retrieval system that drafts insurance claim approvals and denials with Azure OpenAI and sentence transformers.</li>
-          <li>Raised accuracy with a sliding window in LlamaIndex, stored data in Azure AI, and served it through FastAPI and Streamlit.</li>
-        </ul>
-      </article>
+      <div class="jobs">
+        <article class="job open">
+          <button type="button" aria-expanded="true">
+            <span class="idx">01</span>
+            <span>
+              <strong>Machine learning engineer, Qualcomm R&amp;D</strong>
+              <em>Sept 2024 – present · India</em>
+            </span>
+          </button>
+          <div class="panel">
+            <p>The work is deployment. A model that trains is not the same object as a model that runs on a Snapdragon NPU, and most of the surprises live in that gap.</p>
+            <p>I added Mistral to the Microsoft Olive recipe set and ran sensitivity checks for QAIRT, so we could see which layers the compiler actually cared about before anyone tried to ship it. On the runtime side I stopped reading the whole weight file at startup. A layer loads its tensors when it needs them, and compression sits on that path. Peak RAM fell by 90%, and throughput went up with it. I also write DirectML operators for inference on Windows on Snapdragon, the cases where the graph reaches a kernel the stack does not have yet.</p>
+          </div>
+        </article>
+
+        <article class="job">
+          <button type="button" aria-expanded="false">
+            <span class="idx">02</span>
+            <span>
+              <strong>Generative AI intern, Primera Medical Technologies</strong>
+              <em>May 2024 – July 2024</em>
+            </span>
+          </button>
+          <div class="panel">
+            <p>Primera wanted a desk that could draft an insurance approval or a denial from the claim file, not from a generic answer. I built the retrieval path with Azure OpenAI and sentence transformers, and used a sliding window in LlamaIndex so the model saw the clause that decided the claim instead of a chopped paragraph. The store was Azure AI. FastAPI and Streamlit were the front of it.</p>
+          </div>
+        </article>
+      </div>
+      <p class="aside">In June 2025 I gave a faculty session on retrieval-augmented generation at PVPSIT.</p>
     </section>
 
-    <section>
+    <section class="wrap" id="projects">
       <h2>Projects</h2>
-      <article>
-        <p class="when">August 2025</p>
-        <h3><a href="https://github.com/sandhyaiit/gemma-lora">Gemma with LoRA</a></h3>
-        <p>Fine-tuned Gemma on the No Robots dataset with parameter-efficient LoRA, then served the adapter in a Streamlit chat.</p>
-      </article>
-      <article>
-        <p class="when">June 2024</p>
-        <h3><a href="https://github.com/sandhyaiit/lstm-gan-soh">Quantized LSTM-GAN for battery state of health</a></h3>
-        <p>Estimated lithium-ion state of health on the Oxford battery cells. An LSTM-GAN and a Bi-LSTM-WGAN add training sequences, then the estimators are packed from float32 to int8 with post-training quantization and quantization-aware training.</p>
-      </article>
-      <article>
-        <p class="when">November 2023</p>
-        <h3><a href="https://github.com/sandhyaiit/Knowledge-Distillation">Task-specific BERT distillation</a></h3>
-        <p>Distilled BERT-base into BERT-tiny in one step. The student reached 83.4% accuracy with 96% fewer parameters.</p>
-      </article>
-      <article>
-        <p class="when">July 2023</p>
-        <h3>Road damage across countries</h3>
-        <p>Detected road damage with transfer learning on 26,620 images from different countries. Compared SSD MobileNet, YOLO, and Faster R-CNN. SSD MobileNet was the stronger detector.</p>
-      </article>
-      <article>
-        <p class="when">March 2023</p>
-        <h3><a href="https://github.com/sandhyaiit/Cross-Domain-NER">Cross-domain named entity recognition</a></h3>
-        <p>BiLSTM-CRF for a low-resource target domain, with multi-task learning and a mixture of entity experts.</p>
-      </article>
-      <article>
-        <p class="when">November 2022</p>
-        <h3><a href="https://github.com/sandhyaiit/Low_light_enhancement">Low-light image enhancement</a></h3>
-        <p>MBLLEN pulls features at several depths, enhances each branch, and merges them into the output image.</p>
-      </article>
-    </section>
+      <p class="lede">Things I built outside the day job. Open a card for the longer version. The filters only hide cards. They do not change the work.</p>
+      <div class="filters" role="toolbar" aria-label="Filter projects">
+        <button type="button" class="on" data-filter="all">All</button>
+        <button type="button" data-filter="language">Language</button>
+        <button type="button" data-filter="vision">Vision</button>
+        <button type="button" data-filter="deploy">Smaller models</button>
+      </div>
+      <div class="grid">
+        <article class="card" data-tags="language deploy">
+          <button type="button" aria-expanded="false">
+            <span class="tag">Language</span>
+            <strong>Gemma, tuned and then talked to</strong>
+            <em>2025</em>
+          </button>
+          <div class="panel">
+            <p>Gemma 2B, with LoRA on the No Robots conversations, and a Streamlit chat in front of the adapter. The training run is a Colab notebook on a GPU. I held 50 conversations out after a fixed shuffle so the eval is not the same text the adapter just memorised.</p>
+            <p><a href="https://github.com/sandhyaiit/gemma-lora">Repository</a></p>
+          </div>
+        </article>
 
-    <section>
-      <h2>Education</h2>
-      <ul class="plain">
-        <li><strong>M.Tech</strong>, Indian Institute of Technology Hyderabad. CPI 8.75/10. 2024.</li>
-        <li><strong>B.Tech</strong>, Rungta College of Engineering and Technology, Bhilai. CPI 8.51/10. 2019.</li>
-        <li>Senior secondary, Saraswati Vihar English Medium School, Bhilai. 82.40%. 2015.</li>
-        <li>Higher secondary, Saraswati Vihar English Medium School, Bhilai. 83.67%. 2013.</li>
+        <article class="card" data-tags="deploy">
+          <button type="button" aria-expanded="false">
+            <span class="tag">Smaller models</span>
+            <strong>Battery health, then packed to int8</strong>
+            <em>2024</em>
+          </button>
+          <div class="panel">
+            <p>State of health on the Oxford cells, defined from each cell’s own first discharge rather than the nameplate. A plain LSTM-GAN and a bidirectional LSTM with a WGAN both invent extra curves. The estimator is then packed from float32 to int8, once with post-training quantization and once with quantization-aware training. On the held-out cell the float bidirectional model is the best of the saved runs. The int8 copy is smaller. One of the quantized runs got worse, and the write-up says so.</p>
+            <p><a href="https://github.com/sandhyaiit/lstm-gan-soh">Repository</a></p>
+          </div>
+        </article>
+
+        <article class="card" data-tags="language deploy">
+          <button type="button" aria-expanded="false">
+            <span class="tag">Language</span>
+            <strong>A tiny BERT that still passes</strong>
+            <em>2023</em>
+          </button>
+          <div class="panel">
+            <p>BERT-base distilled into BERT-tiny in one step, task first. The student reached 83.4% accuracy with 96% fewer parameters. The question I cared about was how much of the teacher you can throw away before the task notices.</p>
+            <p><a href="https://github.com/sandhyaiit/Knowledge-Distillation">Repository</a></p>
+          </div>
+        </article>
+
+        <article class="card" data-tags="vision">
+          <button type="button" aria-expanded="false">
+            <span class="tag">Vision</span>
+            <strong>The same crack, three countries</strong>
+            <em>2023</em>
+          </button>
+          <div class="panel">
+            <p>Road damage does not look the same in Japan, India, and the Czech Republic. The set is 26,620 images and four damage types. I compared SSD MobileNet with YOLO and Faster R-CNN. SSD MobileNet is the detector this project keeps, trained on mixes of those countries rather than on one of them and hoped across the rest.</p>
+          </div>
+        </article>
+
+        <article class="card" data-tags="language">
+          <button type="button" aria-expanded="false">
+            <span class="tag">Language</span>
+            <strong>Names that change when the domain changes</strong>
+            <em>2023</em>
+          </button>
+          <div class="panel">
+            <p>A BiLSTM-CRF for a target domain that does not have enough labeled text of its own. Multi-task learning shares what transfers. A mixture of entity experts is there so a person tag and a drug tag do not have to share one stubborn representation.</p>
+            <p><a href="https://github.com/sandhyaiit/Cross-Domain-NER">Repository</a></p>
+          </div>
+        </article>
+
+        <article class="card" data-tags="vision">
+          <button type="button" aria-expanded="false">
+            <span class="tag">Vision</span>
+            <strong>A dark photo, read at several depths</strong>
+            <em>2022</em>
+          </button>
+          <div class="panel">
+            <p>Low light is not one problem. Brightness, contrast, noise, and the halos people add while fixing them all arrive together. MBLLEN takes features from several depths of the same frame, repairs each branch, and merges them into one image.</p>
+            <p><a href="https://github.com/sandhyaiit/Low_light_enhancement">Repository</a></p>
+          </div>
+        </article>
+      </div>
+
+      <button type="button" class="more" aria-expanded="false">Earlier repositories</button>
+      <ul class="earlier" hidden>
+        <li><a href="https://github.com/sandhyaiit/facial-emotion-recognition">Faces, and the expression on them</a></li>
+        <li><a href="https://github.com/sandhyaiit/human-activity-recognition">What a phone’s sensors say you are doing</a></li>
+        <li><a href="https://github.com/sandhyaiit/Movie-Recommendation">A small movie recommender behind Flask</a></li>
+        <li><a href="https://github.com/sandhyaiit/credit-card-fraud-detection">Fraud, as a rare class</a></li>
+        <li><a href="https://github.com/sandhyaiit/Customer-Churn-using-ANN">Who is about to leave</a></li>
       </ul>
     </section>
 
-    <section>
-      <h2>Skills</h2>
-      <p>Python, C, C++, SQL, MATLAB. NumPy, Pandas, Keras, Flask, Hugging Face Transformers, LangChain, LlamaIndex, CrewAI, Semantic Kernel, ChromaDB, Weaviate, FAISS, OpenAI API, Azure OpenAI, Ollama.</p>
-      <p>Coursework includes machine learning, deep learning, natural language processing, large language models, retrieval-augmented generation, and agentic systems, plus linear algebra, probability, and data structures.</p>
-    </section>
-
-    <section>
-      <h2>Also</h2>
-      <ul class="plain">
-        <li>Speaker, faculty development program on retrieval-augmented generation, PVPSIT, June 2025.</li>
-        <li>Placement coordinator, Office of Career Services, IIT Hyderabad, 2024.</li>
-        <li>GenAI lead, Google Developer Student Club, IIT Hyderabad, 2024.</li>
-        <li>GATE, 96.26 percentile, 2022. HackerRank 5 star in Python and 4 star in SQL.</li>
-        <li>LLM training, Google Cloud. NLP in TensorFlow. Machine learning and deep learning, IIT Madras. AI training, IIT Bhubaneswar, including a Flask movie recommender.</li>
+    <section class="wrap" id="skills">
+      <h2>What I use</h2>
+      <ul class="chips">
+        <li>Python</li>
+        <li>C++</li>
+        <li>SQL</li>
+        <li>PyTorch</li>
+        <li>Hugging Face</li>
+        <li>QAIRT</li>
+        <li>DirectML</li>
+        <li>LangChain</li>
+        <li>LlamaIndex</li>
+        <li>Azure OpenAI</li>
+        <li>FastAPI</li>
+        <li>Streamlit</li>
       </ul>
     </section>
   </main>
+
+  <footer class="wrap">
+    <p>Sandhya Rani · <a href="https://github.com/sandhyaiit">GitHub</a></p>
+  </footer>
+
+  <script>
+    document.querySelectorAll(".job > button, .card > button").forEach(function (button) {
+      button.addEventListener("click", function () {
+        var box = button.parentElement;
+        var open = box.classList.toggle("open");
+        button.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+    });
+
+    var cards = Array.prototype.slice.call(document.querySelectorAll(".card"));
+    document.querySelectorAll(".filters button").forEach(function (button) {
+      button.addEventListener("click", function () {
+        document.querySelectorAll(".filters button").forEach(function (other) {
+          other.classList.toggle("on", other === button);
+        });
+        var filter = button.getAttribute("data-filter");
+        cards.forEach(function (card) {
+          var show = filter === "all" || card.getAttribute("data-tags").split(" ").indexOf(filter) !== -1;
+          card.hidden = !show;
+        });
+      });
+    });
+
+    var more = document.querySelector(".more");
+    var earlier = document.querySelector(".earlier");
+    more.addEventListener("click", function () {
+      var open = earlier.hidden;
+      earlier.hidden = !open;
+      more.setAttribute("aria-expanded", open ? "true" : "false");
+      more.textContent = open ? "Hide earlier repositories" : "Earlier repositories";
+    });
+  </script>
 </body>
 </html>
