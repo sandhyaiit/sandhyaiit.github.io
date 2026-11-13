@@ -16,7 +16,6 @@
     <nav>
       <a href="#home">Home</a>
       <a href="#work">Work</a>
-      <a href="#opensource">Open source contributions</a>
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
       <a href="#speaker">Speaker</a>
@@ -61,9 +60,9 @@
             <ul>
               <li>Contributions to Open Source
                 <ul>
-                  <li>Upstreamed Mistral support in Microsoft Olive-Recipes and conducted sensitivity analysis for QAIRT, enabling optimized AI model deployment and improved inference performance on Snapdragon NPUs.</li>
-                  <li>Contributed to Intel-BERT and Google-BERT model support in Microsoft Olive-ai (now Olive-Recipes) by developing model configurations and inference optimization workflows, enabling efficient model evaluation and improving inference performance compared to QAIRT.</li>
-                  <li>Implemented Gamma SFixed16 support in the Onnxruntime-qnn, extending support for quantized model inference on Qualcomm Snapdragon NPUs.</li>
+                  <li>Upstreamed Mistral support in Microsoft Olive-Recipes and conducted sensitivity analysis for QAIRT, enabling optimized AI model deployment and improved inference performance on Snapdragon NPUs. <a href="https://github.com/microsoft/olive-recipes/commit/48c7793203beeae21b7c1bd5d5df574834724ac3">View Contribution ↗</a></li>
+                  <li>Contributed to Intel-BERT and Google-BERT model support in Microsoft Olive-ai (now Olive-Recipes) by developing model configurations and inference optimization workflows, enabling efficient model evaluation and improving inference performance compared to QAIRT. <a href="https://github.com/microsoft/Olive">View Contribution ↗</a></li>
+                  <li>Implemented Gamma SFixed16 support in the Onnxruntime-qnn, extending support for quantized model inference on Qualcomm Snapdragon NPUs. <a href="https://github.com/onnxruntime/onnxruntime-qnn/commit/c479557329c9a756e40d94db22a7ea0711b290ed">View Contribution ↗</a></li>
                 </ul>
               </li>
               <li>Implemented deferred weight loading, so model weights are loaded only when needed instead of loading the full model into RAM. Converted model tensors on demand, which reduced the number of weights and intermediate buffers kept in memory at the same time. Combined deferred loading with model compression, reducing peak RAM by 90% and improving inference throughput.</li>
@@ -105,26 +104,6 @@
           </div>
         </article>
       </div>
-    </section>
-
-    <section class="wrap" id="opensource">
-      <h2>Open source contributions</h2>
-      <ul class="oss">
-        <li>
-          <a href="https://github.com/microsoft/olive-recipes">Microsoft Olive-Recipes</a>
-          <p>Upstreamed Mistral support in Microsoft Olive-Recipes and conducted sensitivity analysis for QAIRT, enabling optimized AI model deployment and improved inference performance on Snapdragon NPUs.</p>
-          <p><a href="https://github.com/microsoft/olive-recipes/commit/48c7793203beeae21b7c1bd5d5df574834724ac3">View Contribution ↗</a></p>
-        </li>
-        <li>
-          <a href="https://github.com/microsoft/Olive">Microsoft Olive-ai</a>
-          <p>Contributed to Intel-BERT and Google-BERT model support in Microsoft Olive-ai (now Olive-Recipes) by developing model configurations and inference optimization workflows, enabling efficient model evaluation and improving inference performance compared to QAIRT.</p>
-        </li>
-        <li>
-          <a href="https://github.com/onnxruntime/onnxruntime-qnn">ONNX Runtime QNN</a>
-          <p>Implemented Gamma SFixed16 support in the Onnxruntime-qnn, extending support for quantized model inference on Qualcomm Snapdragon NPUs.</p>
-          <p><a href="https://github.com/onnxruntime/onnxruntime-qnn/commit/c479557329c9a756e40d94db22a7ea0711b290ed">View Contribution ↗</a></p>
-        </li>
-      </ul>
     </section>
 
     <section class="wrap" id="projects">
@@ -230,17 +209,23 @@
       <h2>What I use</h2>
       <ul class="chips">
         <li>Python</li>
+        <li>C</li>
         <li>C++</li>
-        <li>SQL</li>
-        <li>PyTorch</li>
-        <li>Hugging Face</li>
-        <li>QAIRT</li>
-        <li>DirectML</li>
+        <li>NumPy</li>
+        <li>Pandas</li>
+        <li>Keras</li>
+        <li>Flask</li>
         <li>LangChain</li>
+        <li>CrewAI</li>
+        <li>Semantic Kernel</li>
         <li>LlamaIndex</li>
+        <li>ChromaDB</li>
+        <li>Weaviate</li>
+        <li>FAISS</li>
+        <li>Hugging Face Transformers</li>
+        <li>OpenAI API</li>
         <li>Azure OpenAI</li>
-        <li>FastAPI</li>
-        <li>Streamlit</li>
+        <li>Ollama</li>
       </ul>
     </section>
 
