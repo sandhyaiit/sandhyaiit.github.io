@@ -149,7 +149,7 @@ section.wrap { padding: 1.6rem 0; }
 .oss p a {
   font-family: inherit;
   font-size: inherit;
-  font-weight: 600;
+  font-weight: inherit;
 }
 
 .job, .card {
