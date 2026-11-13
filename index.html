@@ -58,11 +58,15 @@
             </span>
           </button>
           <div class="panel">
+            <p class="group-label">Contributions to Open Source</p>
             <ul>
-              <li>Contribute to Microsoft Olive-Recipes by upstreaming Mistral support and carry out sensitivity analysis for QAIRT, enabling optimized AI model deployment and improved inference performance on Snapdragon NPUs.</li>
-              <li>Implement deferred weight loading, so model weights are loaded only when needed instead of loading the full model into RAM. Convert model tensors on demand, which reduces the number of weights and intermediate buffers kept in memory at the same time. Combined with model compression, this reduced peak RAM by 90% and improved inference throughput.</li>
-              <li>Upstream model support in Microsoft Olive-ai by integrating Intel-BERT, Google-BERT, and CLIP models, enabling efficient model evaluation and optimization workflows and improving inference performance compared to QAIRT.</li>
-              <li>Build custom operators in DirectML to improve ML inference performance on ARM-based Windows on Snapdragon (WoS) devices.</li>
+              <li><a href="https://github.com/microsoft/olive-recipes/commit/48c7793203beeae21b7c1bd5d5df574834724ac3">Upstreamed Mistral support in Microsoft Olive-Recipes and conducted sensitivity analysis for QAIRT, enabling optimized AI model deployment and improved inference performance on Snapdragon NPUs.</a></li>
+              <li>Upstreamed model support in Microsoft Olive-ai by integrating Intel-BERT &amp; Google-BERT, enabling efficient model evaluation and optimization workflows, and improving inference performance compared to QAIRT.</li>
+              <li><a href="https://github.com/onnxruntime/onnxruntime-qnn/commit/c479557329c9a756e40d94db22a7ea0711b290ed">Implemented Gamma SFixed16 support in the Onnxruntime-qnn, extending support for quantized model inference on Qualcomm Snapdragon NPUs.</a></li>
+            </ul>
+            <ul>
+              <li>Implemented deferred weight loading, so model weights are loaded only when needed instead of loading the full model into RAM. Converted model tensors on demand, which reduced the number of weights and intermediate buffers kept in memory at the same time. Combined deferred loading with model compression, reducing peak RAM by 90% and improving inference throughput.</li>
+              <li>Built custom operators in DirectML to improve ML inference performance on ARM-based Windows on Snapdragon (WoS) devices.</li>
             </ul>
           </div>
         </article>
